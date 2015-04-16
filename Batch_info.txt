@@ -1,0 +1,54 @@
+Total_Batch : 4
+
+Batch_Name : 1st_year_2nd_term
+Total_courses : 10
+Name of Courses with Credits :
+CSE 1201 - 3
+CSE 1202 - 1.5
+CSE 1207 - 3
+CHEM 1207 - 3
+CHEM 1208 - 0.75
+EEE 1217 - 3
+EEE 1218 - 1.5
+HUM 1208 - 0.75
+MATH 1207 - 3
+ME 1270 - 0.75
+
+Batch_Name : 2nd_year_2nd_term
+Total_courses : 9
+Name of Courses with Credits :
+CSE 2200 - 1.5
+CSE 2201 - 3
+CSE 2202 - 0.75
+CSE 2207 - 3
+CSE 2208 - 0.75
+CSE 2213 - 3
+EEE 2217 - 3
+EEE 2218 - 1.5
+MATH 2207 - 3
+
+Batch_Name : 3rd_year_2nd_term
+Total_courses : 8
+Name of Courses with Credits :
+CSE 3201 - 3
+CSE 3202 - 1.5
+CSE 3203 - 3
+CSE 3204 - 0.75
+CSE 3207 - 3
+CSE 3211 - 3
+CSE 3212 - 0.75
+ECE 3215 - 3
+
+Batch_Name : 4th_year_1st_term
+Total_courses : 10
+Name of Courses with Credits :
+CSE 4105 - 3
+CSE 4106 - 0.75
+CSE 4107 - 3.75
+CSE 4108 - 0.75
+CSE 4109 - 3
+CSE 4110 - 0.75
+CSE 4113 - 3
+CSE 4120 - 0.75
+CSE 4123 - 3
+CSE 4124 - 0.75

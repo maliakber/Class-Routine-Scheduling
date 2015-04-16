@@ -1,0 +1,24 @@
+Assign priority in each slot for every instructor
+Allocate possible time slot for lab for every instructor
+
+Allocate possible time slot for every lab course
+// Manage time slot for every lab course using bipartite maching
+for(all lab courses)
+    for(every possible time slot)
+        if(time slot free for batch and istructors)
+	        match current lab course and break;
+        else
+	        if previous assigned course can rematched
+	            match current lab course and break;
+
+Allocate possible time slot for every theory class
+// Manage time slot for every theory class using some random selection of time slot
+while(iteration)
+    for(all theory class)
+        select a random time slot
+        if(selected time slot doesn't violate any hard constraint)
+	        select it for the current theory course;
+    remove point from the current solution for soft constraint violation
+    if(point of current solution > best)
+	    best = current solution's point;
+	    save current solution;

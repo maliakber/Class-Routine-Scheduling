@@ -1,0 +1,431 @@
+Total_Instructors : 39
+
+Name : MMA_Hashem
+Number_of_course : 2
+Courses :
+CSE 1207
+CSE 2213
+Sun - 0 3 3 2 3 2 3 3 3
+Mon - 0 3 3 3 2 2 2 0 0
+Tue - 0 3 3 3 0 0 0 0 0
+Wed - 0 0 0 0 2 3 3 3 3
+Thu - 3 2 3 2 0 0 2 2 2 
+
+Name : KM_Azharul_Hasan
+Number_of_course : 3
+Courses :
+CSE 3211
+CSE 3212
+CSE 4120
+Sun - 0 2 2 3 3 3 0 0 0
+Mon - 2 1 1 2 3 3 3 3 3
+Tue - 0 0 0 2 1 3 0 0 0
+Wed - 0 2 2 1 2 3 0 0 1
+Thu - 2 2 3 2 0 0 2 2 3
+
+Name : Kazi_Rakibul_Alam
+Number_of_course : 2
+Courses :
+CSE 3201
+CSE 3202
+Sun - 0 0 0 0 2 2 0 0 0
+Mon - 2 2 3 3 3 3 2 2 2
+Tue - 0 0 1 2 0 0 0 0 0
+Wed - 0 2 0 3 3 3 2 2 2
+Thu - 1 2 2 2 3 0 0 0 0
+
+Name : Sheikh_Sadi
+Number_of_course : 3
+Courses :
+CSE 3203
+CSE 3204
+CSE 4113
+Sun - 1 1 3 3 3 3 0 0 0
+Mon - 2 2 0 0 0 2 2 2 2
+Tue - 1 2 2 0 0 1 0 0 0
+Wed - 1 1 3 3 0 3 2 2 2
+Thu - 0 0 1 1 3 0 2 2 2
+
+Name : Aminul_Haque
+Number_of_course : 5
+Courses :
+CSE 2200
+CSE 4105
+CSE 4106
+CSE 4123
+CSE 4124
+Sun - 0 0 1 2 2 1 3 3 3
+Mon - 2 2 3 3 3 3 2 2 2
+Tue - 0 0 2 3 0 2 3 3 3
+Wed - 0 3 3 2 2 3 0 0 0
+Thu - 3 3 2 3 3 3 0 0 0
+
+Name : Salim_Mollah
+Number_of_course : 2
+Courses :
+CSE 2207
+CSE 2208
+Sun - 0 1 1 3 2 2 0 0 0
+Mon - 1 1 3 1 2 1 0 0 0
+Tue - 0 2 2 3 0 3 3 3 3
+Wed - 0 3 3 2 1 1 3 3 3
+Thu - 0 2 2 3 0 0 2 2 2
+
+Name : Faijul_Amin
+Number_of_course : 5
+Courses :
+CSE 3207
+CSE 4107
+CSE 4108
+CSE 4109
+CSE 4110
+Sun - 0 3 2 2 3 0 3 3 3
+Mon - 2 3 3 0 0 3 1 1 1
+Tue - 2 2 3 2 0 0 3 3 3
+Wed - 0 2 2 2 1 1 1 1 1
+Thu - 1 1 3 2 3 3 0 0 0
+
+Name : Nawaz_Ali
+Number_of_course : 2
+Courses :
+CSE 2207
+CSE 2208
+Sun - 0 3 2 3 1 3 1 0 0
+Mon - 2 2 2 3 0 1 2 2 2
+Tue - 0 0 0 2 3 0 0 0 0
+Wed - 0 3 2 2 1 1 3 3 3
+Thu - 1 1 3 2 0 0 0 0 0
+
+Name : Mashrur_E_Elahi
+Number_of_course : 3
+Courses :
+CSE 2200
+CSE 2201
+CSE 2202
+Sun - 0 3 3 0 1 1 0 0 0
+Mon - 2 2 3 3 3 3 2 2 2
+Tue - 2 3 2 3 3 2 0 0 0
+Wed - 0 2 2 2 1 0 2 2 3
+Thu - 1 1 2 3 3 2 0 0 0
+
+Name : Al_Mahmud
+Number_of_course : 4
+Courses :
+CSE 3201
+CSE 3202
+CSE 4123
+CSE 4124
+Sun - 0 0 3 1 0 3 2 3 3
+Mon - 0 0 1 1 2 2 2 2 2
+Tue - 2 2 3 2 0 2 0 0 0
+Wed - 0 2 0 3 2 3 1 1 1
+Thu - 1 1 2 2 0 3 0 0 0
+
+Name : Bishnu_Sarker
+Number_of_course : 7
+Courses :
+CSE 1201
+CSE 1202
+CSE 4107
+CSE 4108
+CSE 4109
+CSE 4110
+CSE 4120
+Sun - 0 0 3 3 0 3 2 3 3
+Mon - 0 0 1 3 2 3 3 3 3
+Tue - 2 2 3 2 3 2 2 3 3
+Wed - 2 2 3 0 3 3 0 0 0
+Thu - 1 1 2 2 3 3 0 0 0
+
+Name : Tabassm_Omar
+Number_of_course : 5
+Courses :
+CSE 1207
+CSE 2201
+CSE 2202
+CSE 3207
+CSE 4113
+Sun - 0 3 3 3 0 3 0 0 0
+Mon - 0 0 1 0 2 3 3 3 3
+Tue - 0 3 0 3 3 3 2 3 3
+Wed - 0 2 0 3 0 0 0 0 0
+Thu - 0 0 0 0 2 3 0 0 0
+
+Name : Saifuddin_Mahmud
+Number_of_course : 4
+Courses :
+CSE 3203
+CSE 3204
+CSE 4105
+CSE 4106
+Sun - 0 0 3 3 3 3 2 3 3
+Mon - 0 0 3 3 2 3 0 0 0
+Tue - 2 2 3 2 3 2 2 3 3
+Wed - 0 0 3 0 3 0 0 0 0
+Thu - 1 1 3 2 3 3 0 0 0
+
+Name : Mr_X
+Number_of_course : 4
+Courses :
+CSE 1201
+CSE 1202
+CSE 3212
+CSE 3211
+Sun - 0 0 3 3 3 3 2 3 3
+Mon - 0 3 3 3 2 3 0 0 0
+Tue - 2 1 1 2 3 2 3 2 3
+Wed - 2 3 3 0 3 0 0 0 0
+Thu - 1 1 3 2 3 3 0 0 0
+
+Name : Mr_Y
+Number_of_course : 1
+Courses :
+CSE 2213
+Sun - 0 0 0 1 1 2 2 3 3
+Mon - 0 3 3 3 2 3 0 0 0
+Tue - 2 3 1 2 3 2 3 2 3
+Wed - 2 3 3 0 3 0 0 0 0
+Thu - 1 2 3 2 3 3 0 0 0
+
+Name : Mostafa
+Number_of_course : 1
+Courses :
+EEE 1217
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 1 1 2 2 0 0 0 0
+Tue - 2 1 3 2 3 2 0 0 0
+Wed - 2 3 3 0 3 0 0 0 0
+Thu - 1 1 3 2 2 1 0 0 0
+
+Name : Bashir
+Number_of_course : 1
+Courses :
+EEE 1217
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 1 1 2 2 0 0 0 0
+Tue - 2 1 3 2 3 2 0 0 0
+Wed - 2 3 3 0 3 0 0 0 0
+Thu - 1 1 3 2 2 1 0 0 0
+
+Name : Tawabur
+Number_of_course : 2
+Courses :
+EEE 2217
+EEE 2218
+Sun - 0 3 0 2 3 0 0 0 0
+Mon - 0 1 3 3 3 3 0 0 0
+Tue - 0 0 3 1 0 0 0 0 0
+Wed - 3 3 3 0 0 0 0 0 0
+Thu - 0 3 0 2 2 3 0 0 0
+
+Name : Sakib_Galib
+Number_of_course : 2
+Courses :
+EEE 2217
+EEE 2218
+Sun - 0 3 0 2 2 0 0 0 0
+Mon - 0 1 3 3 3 3 0 0 0
+Tue - 0 0 3 1 0 3 0 0 0
+Wed - 3 3 3 0 0 0 0 0 0
+Thu - 0 2 0 2 2 3 0 0 0
+
+Name : Talukdar
+Number_of_course : 1
+Courses :
+EEE 1218
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 1 3 0 0 0 0 0 0
+Tue - 0 0 3 1 0 0 0 0 0
+Wed - 3 3 3 0 0 0 0 0 0
+Thu - 0 0 0 0 0 0 2 2 3
+
+Name : Usman_Goni
+Number_of_course : 1
+Courses :
+EEE 1218
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 1 3 0 0 0 0 0 0
+Tue - 0 0 3 1 0 0 0 0 0
+Wed - 3 3 3 0 0 0 0 0 0
+Thu - 0 0 0 0 0 0 2 2 3
+
+Name : Arif_Hossain
+Number_of_course : 1
+Courses :
+MATH 1207
+Sun - 0 0 0 3 0 0 0 0 0
+Mon - 0 0 0 0 0 0 0 0 0
+Tue - 0 0 0 1 0 3 0 0 0
+Wed - 0 3 0 3 0 0 0 0 0
+Thu - 0 0 3 2 2 0 0 0 0
+
+Name : Hasanuzzaman
+Number_of_course : 1
+Courses :
+MATH 1207
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 1 3 0 0 0 0 0 0
+Tue - 0 3 0 1 0 3 0 0 0
+Wed - 0 0 0 3 0 0 0 0 0
+Thu - 0 0 0 0 0 0 0 0 0
+
+Name : Jamali
+Number_of_course : 1
+Courses :
+MATH 2207
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 3 0 0 0 0 0 0 0
+Tue - 0 0 0 2 0 2 0 0 0
+Wed - 0 0 0 0 3 0 0 0 0
+Thu - 0 3 0 3 0 0 0 0 0
+
+Name : Touhid
+Number_of_course : 1
+Courses :
+MATH 2207
+Sun - 0 0 0 3 0 0 0 0 0
+Mon - 0 3 0 0 3 0 0 0 0
+Tue - 0 0 0 3 0 2 0 0 0
+Wed - 0 0 0 0 3 0 0 0 0
+Thu - 0 3 0 0 0 0 0 0 0
+
+Name : ECE_X
+Number_of_course : 1
+Courses :
+ECE 3215
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 0 0 3 0 0 0 0 0
+Tue - 0 0 0 2 3 2 0 0 0
+Wed - 0 0 1 0 0 0 0 0 0
+Thu - 0 3 2 0 0 0 0 0 0
+
+Name : ECE_Y
+Number_of_course : 1
+Courses :
+ECE 3215
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 0 0 3 0 0 0 0 0
+Tue - 0 0 0 2 3 2 0 0 0
+Wed - 0 0 1 0 0 0 0 0 0
+Thu - 0 3 2 0 0 0 0 0 0
+
+Name : Ariful_Islam
+Number_of_course : 1
+Courses :
+ME 1270
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 0 0 1 2 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 3 3 3 0 0 0
+Thu - 0 3 2 0 0 0 0 0 0
+
+Name : Rashedul_Islam
+Number_of_course : 1
+Courses :
+ME 1270
+Sun - 0 0 0 0 0 0 0 0 0
+Mon - 0 0 0 1 2 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 3 3 3 0 0 0
+Thu - 0 3 2 0 0 0 0 0 0
+
+Name : Subrata
+Number_of_course : 1
+Courses :
+IEM 4227
+Sun - 0 0 0 3 0 0 0 0 0
+Mon - 0 0 0 1 3 2 0 0 0
+Tue - 0 0 0 3 0 0 0 0 0
+Wed - 0 0 1 0 0 2 0 0 0
+Thu - 0 1 1 0 0 0 0 0 0
+
+Name : Golam_Kibria
+Number_of_course : 1
+Courses :
+IEM 4227
+Sun - 0 0 0 3 0 0 0 0 0
+Mon - 0 0 0 1 3 2 0 0 0
+Tue - 0 0 0 3 0 0 0 0 0
+Wed - 0 0 1 0 0 2 0 0 0
+Thu - 0 1 1 0 0 0 0 0 0
+
+Name : Motin
+Number_of_course : 1
+Courses :
+CHEM 1207
+Sun - 0 0 3 0 0 0 0 0 0
+Mon - 0 0 0 1 3 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 0 0 3 0 0 0
+Thu - 0 3 2 0 0 0 0 0 0
+
+Name : Hasan_Morshed
+Number_of_course : 1
+Courses :
+CHEM 1207
+Sun - 0 0 3 0 0 0 0 0 0
+Mon - 0 0 0 1 3 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 0 0 3 0 0 0
+Thu - 0 3 2 0 0 0 0 0 0
+
+Name : Abu_Yousuf
+Number_of_course : 1
+Courses :
+CHEM 1208
+Sun - 0 0 0 3 0 0 3 3 3
+Mon - 0 0 0 1 0 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 0 0 2 0 0 0
+Thu - 1 0 2 0 0 0 0 0 0
+
+Name : Zahirul
+Number_of_course : 1
+Courses :
+CHEM 1208
+Sun - 0 0 0 3 0 0 3 3 3
+Mon - 0 0 0 1 0 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 0 0 2 0 0 0
+Thu - 1 1 2 0 0 0 0 0 0
+
+Name : Tauhiduzzaman
+Number_of_course : 1
+Courses :
+HUM 1208
+Sun - 0 0 0 3 0 0 3 3 3
+Mon - 0 0 0 1 0 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 1 2 2 0 0 0
+Thu - 0 1 2 0 0 0 0 0 0
+
+Name : Guest_Teacher
+Number_of_course : 1
+Courses :
+HUM 1208
+Sun - 0 0 0 3 0 0 3 3 3
+Mon - 0 0 0 1 0 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 2 2 2 0 0 0
+Thu - 0 1 2 0 0 0 0 0 0
+
+Name : Shaila_Ahmed
+Number_of_course : 1
+Courses :
+HUM 4207
+Sun - 0 3 0 0 0 0 0 0 0
+Mon - 0 3 0 1 0 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 0 0 1 0 0 0
+Thu - 0 1 1 3 0 0 0 0 0
+
+Name : Biplob_Rahman
+Number_of_course : 1
+Courses :
+HUM 4207
+Sun - 0 3 0 0 0 0 0 0 0
+Mon - 0 3 0 1 0 2 0 0 0
+Tue - 0 0 0 0 0 0 0 0 0
+Wed - 0 0 1 0 0 1 0 0 0
+Thu - 0 1 1 3 0 0 0 0 0
+
