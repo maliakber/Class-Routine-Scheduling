@@ -1,8 +1,17 @@
 # Class-Routine-Scheduling
 
-Author      : Ali Akber  
-Email       : mail2aliakber@gmail.com  
-Description : I developed this program to schedule class slot to the teachers. Here i used Ant Colony Optimization Algorithm(ACO).  
-License     : By Ali Akber  
+Author      : Ali Akber
+Email       : mail2aliakber@gmail.com
+Description : This program works as a Class slot Scheduler
+Algorithm   : Ant Colony Optimization Algorithm(ACO)
+Language    : C++
 
-Source code of Class Routine Scheduling with ACO in C++
+Compile the program:
+g++ -Wall -O3 -o main main.cpp
+
+	-Wall: with all warnings
+	-O3: compiler optimization
+	-o: output binary name
+
+Run the program:
+`./main`

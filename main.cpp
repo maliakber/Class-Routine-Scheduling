@@ -40,39 +40,38 @@ int inf=100000000;
 //////////////////////////////////////////////////////////////////////
 // Numberic Functions
 int day(int y,int m,int d)
-  {if(m<3){--y;m+=12;}return 365*y+y/4 - y/100+y/400+(153*m - 457)/5+d - 306;}
+{if(m<3){--y;m+=12;}return 365*y+y/4 - y/100+y/400+(153*m - 457)/5+d - 306;}
 ll josephus(ll x) // If the 2nd person is killed always then the last man
-  {return 2*(x-pow(2,(ll)log2(x)))+1;}
+{return 2*(x-pow(2,(ll)log2(x)))+1;}
 ll josephus(ll n,ll x) // If the 2nd person is killed always then the x'th man
-  {if(n==1&&x==1)return 1;if(n>1&&x==1)return 2;ll res=josephus(n-1,x-1);if(res==n-1)return 1;if(res<=n-2)return res+2;}
+{if(n==1&&x==1)return 1;if(n>1&&x==1)return 2;ll res=josephus(n-1,x-1);if(res==n-1)return 1;if(res<=n-2)return res+2;return 0;}
 ll survivor(ll n,ll k) // If the k'th person is killed always then the last man
-  {ll i,s;for(s=0,i=1;i<=n;i++)s=(s+k)%i;return (s+1);}
+{ll i,s;for(s=0,i=1;i<=n;i++)s=(s+k)%i;return (s+1);}
 template<class T> inline T gcd(T a,T b)
-  {if(a<0)return gcd(-a,b);if(b<0)return gcd(a,-b);return (b==0)?a:gcd(b,a%b);}
+{if(a<0)return gcd(-a,b);if(b<0)return gcd(a,-b);return (b==0)?a:gcd(b,a%b);}
 template<class T> inline T lcm(T a,T b)
-  {if(a<0)return lcm(-a,b);if(b<0)return lcm(a,-b);return a*(b/gcd(a,b));}
+{if(a<0)return lcm(-a,b);if(b<0)return lcm(a,-b);return a*(b/gcd(a,b));}
 template<class T> T power(T N,T P)  // a^b
-  {return (P==0)? 1: N*power(N,P-1);}
+{return (P==0)? 1: N*power(N,P-1);}
 template<class T> inline T mod(T N,T M)  // n%mod
-  {if(N<0)N+=(ceil(-N*1.00/M)*M);return N%M;}
+{if(N<0)N+=(ceil(-N*1.00/M)*M);return N%M;}
 template<class T> T bigmod(T a,T b,T mod)  //(a^b)%mod
-  {if(b==0)return 1;if(b%2==0){T ret=bigmod(a,b/2,mod);return ((ret%mod)*(ret%mod))%mod;}else return ((a%mod)*(bigmod(a,b-1,mod)%mod))%mod;}
+{if(b==0)return 1;if(b%2==0){T ret=bigmod(a,b/2,mod);return ((ret%mod)*(ret%mod))%mod;}else return ((a%mod)*(bigmod(a,b-1,mod)%mod))%mod;}
 template<class T> inline double distance_point(pair<T,T>P,pair<T,T>Q)
-  {T X1,X2,Y1,Y2;X1=P.first,Y1=P.second;X2=Q.first,Y2=Q.second;return sqrt((X1-X2)*(X1-X2)+(Y1-Y2)*(Y1-Y2));}
+{T X1,X2,Y1,Y2;X1=P.first,Y1=P.second;X2=Q.first,Y2=Q.second;return sqrt((X1-X2)*(X1-X2)+(Y1-Y2)*(Y1-Y2));}
 // String conversion
-template<class T> ll stoi(T Str){stringstream ss(Str);ll N;ss>>N;return N;}
 template<class T> string itos(T N){stringstream ss;ss<<N;string Str;Str=ss.str();return Str;}
-template<class T> vector<int> vstoi(T Str){stringstream ss(Str);vector<int>A;for(int N;ss>>N;A.push_back(N));return A;}
+template<class T> vector<int> vstoi(T Str){stringstream ss(Str);vector<int>A;for(int N;ss>>N;A.push_back(N)){}return A;}
 vector<string> split(string str,string Separator)
-  {vector<string>answer;string temp;for(int i=0;i<str.length();i++){bool isSeparator=false;for(int j=0;j<Separator.length();j++)if(str[i]==Separator[j])isSeparator=true;if(!isSeparator){temp+=str[i];continue;}if(temp!="")answer.push_back(temp);temp="";}if(temp!="")answer.push_back(temp);return answer;}
+{vector<string>answer;string temp;for(auto i=0u;i<str.length();i++){bool isSeparator=false;for(auto j=0u;j<Separator.length();j++)if(str[i]==Separator[j])isSeparator=true;if(!isSeparator){temp+=str[i];continue;}if(temp!="")answer.push_back(temp);temp="";}if(temp!="")answer.push_back(temp);return answer;}
 // Working with bit
 ll check_bit(ll N,int POS){return (N & (1LL<<POS));}
 ll on_bit(ll N,int POS){return N | (1LL<<POS);}
 ll off_bit(ll N,int POS){return N & ~(1LL<<POS);}
 int find_parent(int x)
-  {if(parent[x]!=x)parent[x]=find_parent(parent[x]);return parent[x];}
+{if(parent[x]!=x)parent[x]=find_parent(parent[x]);return parent[x];}
 string from_decimal_to(ll n, int b)  // Upto base 20
-  {if(n==0)return "0";string chars="0123456789ABCDEFGHIJ";string result="";while(n>0){result=chars[n%b]+result;n/=b;}return result;}
+{if(n==0)return "0";string chars="0123456789ABCDEFGHIJ";string result="";while(n>0){result=chars[n%b]+result;n/=b;}return result;}
 #define pb push_back
 #define ff first
 #define ss second
@@ -101,23 +100,22 @@ vector<ii>lab[50],theory[50];
 int comp(pair<int,int>p,pair<int,int>q)
 {
     int x=p.ss%3,y=q.ss%3;
-    x==0?x=3:x=x;
-    y==0?y=3:y=y;
+    x==0?x=3:x;
+    y==0?y=3:y;
     if(x==y)
-      return p.ff>q.ff;
+        return p.ff>q.ff;
     return x>y;
 }
 
 class input
 {
-    public:
-        int take_courses_info();
-        int take_instructors_info();
+public:
+    int take_courses_info();
+    int take_instructors_info();
 };
 int input::take_courses_info()
 {
-    freopen("Batch_info.txt","r",stdin);
-    int i,j,k,l,m,n;
+    stdin = freopen("Batch_info.txt","r",stdin);
     string str;
     vector<string>temp;
     courses.push_back("");
@@ -127,7 +125,7 @@ int input::take_courses_info()
     temp=split(str," ");
     batch=stoi(temp[2]);
     int cnt=1;
-    for(i=1;i<=batch;i++) // Taking total courses of each batch
+    for(auto i=1;i<=batch;i++) // Taking total courses of each batch
     {
         getline(cin,str);
         getline(cin,str);
@@ -135,9 +133,9 @@ int input::take_courses_info()
         batch_name.push_back(temp[2]);
         getline(cin,str);
         temp=split(str," ");
-        n=stoi(temp[2]);
+        auto n=stoi(temp[2]);
         getline(cin,str);
-        for(j=1;j<=n;j++)
+        for(auto j=1;j<=n;j++)
         {
             getline(cin,str);
             temp=split(str," -");
@@ -158,11 +156,11 @@ int input::take_courses_info()
         }
     }
     fclose(stdin);
+    return 0;
 }
 int input::take_instructors_info()
 {
-    freopen("Instructor_info.txt","r",stdin);
-    int i,j,k,l,m,n;
+    stdin = freopen("Instructor_info.txt","r",stdin);
     string str;
     vector<string>temp;
     instructor.push_back("");
@@ -171,7 +169,7 @@ int input::take_instructors_info()
     temp=split(str," ");
     ins=stoi(temp[2]);
     getline(cin,str);
-    for(i=1;i<=ins;i++)
+    for(auto i=1;i<=ins;i++)
     {
         getline(cin,str);
         temp=split(str," ");
@@ -180,17 +178,17 @@ int input::take_instructors_info()
         temp=split(str," ");
         no_of_course.push_back(stoi(temp[2]));
         getline(cin,str);
-        for(j=0;j<no_of_course[i];j++) // Each instructor's courses
+        for(auto j=0;j<no_of_course[i];j++) // Each instructor's courses
         {
             getline(cin,str);
             instructor_course[i].push_back(str);
             course_instructor[course_no[str]].push_back(i);
         }
-        int cnt=1;
-        for(j=0;j<5;j++) // Each instructors favoured time slots
+        int m, cnt=1;
+        for(auto j=0;j<5;j++) // Each instructors favoured time slots
         {
             cin>>str>>str;
-            for(k=1;k<=9;k++)
+            for(auto k=1;k<=9;k++)
             {
                 cin>>m;
                 time_slot[i][cnt++]=m;
@@ -225,9 +223,10 @@ int input::take_instructors_info()
         getline(cin,str);
     }
     fclose(stdin);
+    return 0;
 }
 
-int maxi_lab=-1<<20,total_solved_lab=0;
+int maxi_lab=-(1<<20),total_solved_lab=0;
 vector<string>name_lab;
 map<int,int>batch_lab;
 pair<int,int> lab_ins[50];
@@ -240,44 +239,46 @@ int batch_free_slot[10][50];
 
 class manage_lab_slot
 {
-    public:
-        int lab_violation(int x,int slot,int cur_batch);
-        int copy_best();
-        int copy_best_final();
-        int make_rand();
-        int manage_lab();
+public:
+    int lab_violation(int x,int slot,int cur_batch);
+    int copy_best();
+    int copy_best_final();
+    int make_rand();
+    int manage_lab();
 };
 int manage_lab_slot::copy_best()
 {
     for(int i=0;i<30;i++)
     {
         for(int j=0;j<7;j++)
-          batch_days_lab[i][j]=batch_days_lab_temp[i][j];
+            batch_days_lab[i][j]=batch_days_lab_temp[i][j];
     }
     for(int i=0;i<50;i++)
     {
         lab_side[i]=lab_side_temp[i];
         for(int j=0;j<7;j++)
-          ins_days_lab[i][j]=ins_days_lab_temp[i][j];
+            ins_days_lab[i][j]=ins_days_lab_temp[i][j];
         for(int j=0;j<20;j++)
-          used_slot_for_lab[i][j]=used_slot_for_lab_temp[i][j];
+            used_slot_for_lab[i][j]=used_slot_for_lab_temp[i][j];
     }
+    return 0;
 }
 int manage_lab_slot::copy_best_final()
 {
     for(int i=0;i<30;i++)
     {
         for(int j=0;j<7;j++)
-          batch_days_lab_final[i][j]=batch_days_lab[i][j];
+            batch_days_lab_final[i][j]=batch_days_lab[i][j];
     }
     for(int i=0;i<50;i++)
     {
         lab_side_final[i]=lab_side[i];
         for(int j=0;j<7;j++)
-          ins_days_lab_final[i][j]=ins_days_lab[i][j];
+            ins_days_lab_final[i][j]=ins_days_lab[i][j];
         for(int j=0;j<20;j++)
-          used_slot_for_lab_final[i][j]=used_slot_for_lab[i][j];
+            used_slot_for_lab_final[i][j]=used_slot_for_lab[i][j];
     }
+    return 0;
 }
 int manage_lab_slot::lab_violation(int x,int slot,int cur_batch)
 {
@@ -296,15 +297,15 @@ int manage_lab_slot::lab_violation(int x,int slot,int cur_batch)
             str=temp[0]+" "+temp[1];
             int n=course_no[str];
             if(credit[n]==1.5)
-              return -2;
+                return -2;
         }
         else if(batch_days_lab_temp[cur_batch-1][slot_day]||batch_days_lab_temp[cur_batch-2][slot_day])
-          return -2;
+            return -2;
     }
     else
     {
         if(batch_days_lab_temp[cur_batch][slot_day])
-          return -2;
+            return -2;
     }
 
     pair<int,int>p=lab_ins[x];
@@ -312,54 +313,53 @@ int manage_lab_slot::lab_violation(int x,int slot,int cur_batch)
     int ins2=p.ss;
 
     if(used_slot_for_lab_temp[ins1][slot]||used_slot_for_lab_temp[ins2][slot])
-      return -2;
+        return -2;
     if(ins_days_lab_temp[ins1][slot_day]==2||ins_days_lab_temp[ins2][slot_day]==2)
-      return -2;
+        return -2;
 
     // Soft constraint calculation
     int total=0;
     if(ins_days_lab_temp[ins1][slot_day])
-      total++;
+        total++;
     if(ins_days_lab_temp[ins2][slot_day])
-      total++;
+        total++;
     if(slot%3)
-      total++;
+        total++;
     return total;
 }
 int manage_lab_slot::make_rand()
 {
-    int i,j,k,l,m,n;
     int cnt=name_lab.size();
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
-        m=lab_slot[i].size();
-        for(j=0;j<m/2-2;j++)
+        int m=lab_slot[i].size();
+        for(auto j=0;j<m/2-2;j++)
         {
             int p=rand()%m;
             swap(lab_slot[i][j],lab_slot[i][p]);
         }
     }
+    return 0;
 }
 int manage_lab_slot::manage_lab()
 {
-    int i,j,k,l,m,n,p,q;
     name_lab.push_back("");
     int cnt=1;
-    m=1;
-    for(i=1;i<=batch;i++) // Allocating possible time slot for every lab
+    int m=1, n;
+    for(auto i=1;i<=batch;i++) // Allocating possible time slot for every lab
     {
-        for(j=0;j<batch_lab_courses[i].size();j++)
+        for(auto j=0u;j<batch_lab_courses[i].size();j++)
         {
             n=course_no[batch_lab_courses[i][j]];
             int ins1=course_instructor[n][0];
             int ins2=course_instructor[n][1];
             vector<ii>temp;
-            for(k=0;k<lab[ins1].size();k++)
+            for(auto k=0u;k<lab[ins1].size();k++)
             {
-                for(l=0;l<lab[ins2].size();l++)
+                for(auto l=0u;l<lab[ins2].size();l++)
                 {
-                    p=lab[ins1][k].ss;
-                    q=lab[ins2][l].ss;
+                    auto p=lab[ins1][k].ss;
+                    auto q=lab[ins2][l].ss;
                     if(p==q&&!used_slot_for_lab[ins1][p]&&!used_slot_for_lab[ins2][q])
                     {
                         int sum=lab[ins1][k].ff+lab[ins2][l].ff;
@@ -391,16 +391,16 @@ int manage_lab_slot::manage_lab()
         m=m+3;
     }
     double pheromone[cnt+1][20],evprate=0.7;
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
-        for(j=1;j<=15;j++)
-          pheromone[i][j]=1/evprate; // 1/ro where ro=0.7
+        for(auto j=1;j<=15;j++)
+            pheromone[i][j]=1/evprate; // 1/ro where ro=0.7
     }
     int generation=0;
-    double max_pheromone=-1<<20;
+    double max_pheromone=-(1<<20);
     while(++generation<500)
     {
-        int ant=0,solved=0,maxi_temp=-1<<20;
+        int ant=0,solved=0,maxi_temp=-(1<<20);
         while(++ant<500)
         {
             memset(lab_side_temp,0,sizeof(lab_side_temp));
@@ -408,7 +408,7 @@ int manage_lab_slot::manage_lab()
             memset(used_slot_for_lab_temp,0,sizeof(used_slot_for_lab_temp));
             memset(ins_days_lab_temp,0,sizeof(ins_days_lab_temp));
             int total=0,solved_temp=0;
-            for(i=1;i<cnt;i++)
+            for(auto i=1;i<cnt;i++)
             {
                 pair<int,int>inst=lab_ins[i];
                 int ins1=inst.ff;
@@ -417,7 +417,7 @@ int manage_lab_slot::manage_lab()
 
                 vector<pair<double,int> >probability;
                 double total_prob=0,z=0;
-                for(j=0;j<lab_slot[i].size();j++)
+                for(auto j=0u;j<lab_slot[i].size();j++)
                 {
                     int slot=lab_slot[i][j].ss;
                     double hur=pheromone[i][lab_slot[i][j].ss]*(1.00/(1+lab_violation(i,slot,cur_batch)));
@@ -427,17 +427,17 @@ int manage_lab_slot::manage_lab()
                         total_prob+=probability[z++].ff;
                     }
                 }
-                for(j=0;j<z;j++)
-                  probability[j].ff/=total_prob;
+                for(auto j=0;j<z;j++)
+                    probability[j].ff/=total_prob;
                 sort(probability.rbegin(),probability.rend());
                 /*
                 for(j=0;j<z;j++)
                   printf("%d : %.2lf\n",probability[j].ss,probability[j].ff);
                 */
                 if(!z)
-                  continue;
+                    continue;
                 m=z*0.7;
-                m==0?m++:m=m;
+                m==0?m++:m;
 
                 int q=rand()%m;
                 int p=probability[q].ss;
@@ -449,9 +449,9 @@ int manage_lab_slot::manage_lab()
                     slot_day=slot/3+1;
 
                 if(cur_batch%3==0)
-                  batch_days_lab_temp[cur_batch][slot_day]=batch_days_lab_temp[cur_batch-1][slot_day]=batch_days_lab_temp[cur_batch-2][slot_day]=i;
+                    batch_days_lab_temp[cur_batch][slot_day]=batch_days_lab_temp[cur_batch-1][slot_day]=batch_days_lab_temp[cur_batch-2][slot_day]=i;
                 else
-                  batch_days_lab_temp[cur_batch][slot_day]=i;
+                    batch_days_lab_temp[cur_batch][slot_day]=i;
                 lab_side_temp[i]=slot;
                 used_slot_for_lab_temp[ins1][slot]=used_slot_for_lab_temp[ins2][slot]=i;
                 ins_days_lab_temp[ins1][slot_day]++;
@@ -471,9 +471,9 @@ int manage_lab_slot::manage_lab()
         if(solved>=total_solved_lab)
         {
             double val=0;
-            for(i=1;i<cnt;i++)
+            for(auto i=1;i<cnt;i++)
             {
-                for(j=1;j<=15;j++)
+                for(auto j=1;j<=15;j++)
                 {
                     if(lab_side[i]==j)
                     {
@@ -481,7 +481,7 @@ int manage_lab_slot::manage_lab()
                         val+=pheromone[i][j];
                     }
                     else
-                      pheromone[i][j]=(1-evprate)*pheromone[i][j]; // (1-ro)*tau
+                        pheromone[i][j]=(1-evprate)*pheromone[i][j]; // (1-ro)*tau
                 }
             }
             // to print pheromone for every generation
@@ -507,13 +507,13 @@ int manage_lab_slot::manage_lab()
     }
     printf("\n*********** End of lab assignment ***********\n\n");
     // making the time slot visited for each instructor and batch in which lab are assigned
-    for(i=1;i<=ins;i++)
-      for(j=1;j<=15;j++)
-        if(used_slot_for_lab_final[i][j]||j%3==0)
-          time_slot[i][j*3-2]=time_slot[i][j*3-1]=time_slot[i][j*3]=0;
-    for(i=1;i<=batch;i++)
+    for(auto i=1;i<=ins;i++)
+        for(auto j=1;j<=15;j++)
+            if(used_slot_for_lab_final[i][j]||j%3==0)
+                time_slot[i][j*3-2]=time_slot[i][j*3-1]=time_slot[i][j*3]=0;
+    for(auto i=1;i<=batch;i++)
     {
-        for(j=1;j<cnt;j++)
+        for(auto j=1;j<cnt;j++)
         {
             if(lab_side_final[j]&&batch_lab[j]>3*(i-1)&&batch_lab[j]<=3*i)
             {
@@ -523,9 +523,10 @@ int manage_lab_slot::manage_lab()
             }
         }
     }
+    return 0;
 }
 
-int maxi_class=-1<<20,total_solved_class=0;
+int maxi_class=-(1<<20),total_solved_class=0;
 vector<string>name_theory;
 map<int,int>batch_theory;
 vector<ii>theory_slot[80];
@@ -539,71 +540,73 @@ int used_slot_for_class[50][50],used_slot_for_class_temp[50][50],used_slot_for_c
 
 class manage_class_slot
 {
-    public:
-        int copy_best();  // Saving the local best result
-        int copy_best_final();  // Saving the global best result
-        int class_violation(int x,int slot,int n);
-        int can_put(int x,int slot,int n);  // Checking if the theory class in a time slot violating a hard constraint
-        int make_rand();
-        int mutate(int cnt);
-        int manage_class();
+public:
+    int copy_best();  // Saving the local best result
+    int copy_best_final();  // Saving the global best result
+    int class_violation(int x,int slot,int n);
+    int can_put(int x,int slot,int n);  // Checking if the theory class in a time slot violating a hard constraint
+    int make_rand();
+    int mutate(int cnt);
+    int manage_class();
 };
 int manage_class_slot::copy_best()
 {
     for(int i=0;i<10;i++)
     {
         for(int j=0;j<7;j++)
-          batch_days_class[i][j]=batch_days_class_temp[i][j];
+            batch_days_class[i][j]=batch_days_class_temp[i][j];
         for(int j=0;j<50;j++)
-          batch_slot_class[i][j]=batch_slot_class_temp[i][j];
+            batch_slot_class[i][j]=batch_slot_class_temp[i][j];
     }
     for(int i=0;i<50;i++)
     {
         for(int j=0;j<7;j++)
-          ins_days_class[i][j]=ins_days_class_temp[i][j];
+            ins_days_class[i][j]=ins_days_class_temp[i][j];
         for(int j=0;j<50;j++)
-          used_slot_for_class[i][j]=used_slot_for_class_temp[i][j];
+            used_slot_for_class[i][j]=used_slot_for_class_temp[i][j];
     }
     for(int i=0;i<80;i++)
-      selective_slot[i]=selective_slot_temp[i];
+        selective_slot[i]=selective_slot_temp[i];
+    return 0;
 }
 int manage_class_slot::copy_best_final()
 {
     for(int i=0;i<10;i++)
     {
         for(int j=0;j<7;j++)
-          batch_days_class_final[i][j]=batch_days_class[i][j];
+            batch_days_class_final[i][j]=batch_days_class[i][j];
         for(int j=0;j<50;j++)
-          batch_slot_class_final[i][j]=batch_slot_class[i][j];
+            batch_slot_class_final[i][j]=batch_slot_class[i][j];
     }
     for(int i=0;i<50;i++)
     {
         for(int j=0;j<7;j++)
-          ins_days_class_final[i][j]=ins_days_class[i][j];
+            ins_days_class_final[i][j]=ins_days_class[i][j];
         for(int j=0;j<50;j++)
-          used_slot_for_class_final[i][j]=used_slot_for_class[i][j];
+            used_slot_for_class_final[i][j]=used_slot_for_class[i][j];
     }
     for(int i=0;i<80;i++)
-      selective_slot_final[i]=selective_slot[i];
+        selective_slot_final[i]=selective_slot[i];
+    return 0;
 }
 int manage_class_slot::can_put(int x,int slot,int n)
 {
     int slot_day;
     if(slot%9==0)
-      slot_day=slot/9;
+        slot_day=slot/9;
     else
-      slot_day=slot/9+1;
+        slot_day=slot/9+1;
     int cur_batch=batch_theory[x];
     if(batch_slot_class_temp[cur_batch][slot]||batch_days_class_temp[cur_batch][slot_day]>=4)
-      return 0;
-    for(int i=0;i<course_slot[n].size();i++)
-      if(course_slot[n][i]==slot_day)
         return 0;
-    for(int i=0;i<theory_ins[x].size();i++)
+    for(auto i=0u;i<course_slot[n].size();i++)
+        if(course_slot[n][i]==slot_day)
+            return 0;
+    for(auto i=0u;i<theory_ins[x].size();i++)
     {
         int ins=theory_ins[x][i];
         if(used_slot_for_class_temp[ins][slot]||ins_days_class_temp[ins][slot_day]>=2)
-          return 0;
+            return 0;
     }
     return 1;
 }
@@ -612,65 +615,65 @@ int manage_class_slot::class_violation(int x,int slot,int n)
     // For hard constraint violation
     int slot_day;
     if(slot%9==0)
-      slot_day=slot/9;
+        slot_day=slot/9;
     else
-      slot_day=slot/9+1;
+        slot_day=slot/9+1;
     int cur_batch=batch_theory[x];
     if(batch_slot_class_temp[cur_batch][slot])
-      return -2;
-    for(int i=0;i<course_slot[n].size();i++)
-      if(course_slot[n][i]==slot_day)
         return -2;
-    for(int i=0;i<theory_ins[x].size();i++)
+    for(auto i=0u;i<course_slot[n].size();i++)
+        if(course_slot[n][i]==slot_day)
+            return -2;
+    for(auto i=0u;i<theory_ins[x].size();i++)
     {
         int ins=theory_ins[x][i];
         if(used_slot_for_class_temp[ins][slot])
-          return -2;
+            return -2;
     }
 
     // Soft constraint calculation
     int total=0;
     if(batch_days_class_temp[cur_batch][slot_day]>=3)
-      total++;
+        total++;
 
     int ins1=theory_ins[x][0],ins2;
     if(theory_ins[x].size()>1)
-      ins2=theory_ins[x][1];
+        ins2=theory_ins[x][1];
     else
-      ins2=0;
+        ins2=0;
     if(used_slot_for_class_temp[ins1][slot_day]>=2)
-      total++;
+        total++;
     if(used_slot_for_class_temp[ins2][slot_day]>=2)
-      total++;
+        total++;
     if(used_slot_for_class_temp[ins1][slot-1])
-      total++;
+        total++;
     if(used_slot_for_class_temp[ins1][slot+1])
-      total++;
+        total++;
     if(used_slot_for_class_temp[ins2][slot-1])
-      total++;
+        total++;
     if(used_slot_for_class_temp[ins2][slot+1])
-      total++;
+        total++;
     return total;
 }
 int manage_class_slot::make_rand()
 {
-    int i,j,k,l,m,n;
     int cnt=name_theory.size();
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
-        m=theory_slot[i].size();
-        for(j=0;j<m/2-1;j++)
+        auto m=theory_slot[i].size();
+        for(auto j=0u;j<m/2-1;j++)
         {
             int p=rand()%m;
             swap(theory_slot[i][j],theory_slot[i][p]);
         }
     }
+    return 0;
 }
 int manage_class_slot::mutate(int cnt)
 {
     int course_to_mutate=rand()%cnt;
     if(!selective_slot[course_to_mutate]||theory_ins[course_to_mutate].size()>1||!course_to_mutate)
-      return 0;
+        return 0;
     int ins=theory_ins[course_to_mutate][0];
     int cur_batch=batch_theory[course_to_mutate];
     int prev_point=time_slot[ins][selective_slot[course_to_mutate]];
@@ -683,11 +686,6 @@ int manage_class_slot::mutate(int cnt)
     {
         int p=rand()%m;
         int slot=theory_slot[course_to_mutate][p].ss;
-        int slot_day;
-        if(slot%9==0)
-            slot_day=slot/9;
-        else
-            slot_day=slot/9+1;
         if(can_put(course_to_mutate,slot,n))
         {
             if(theory_slot[course_to_mutate][p].ff>prev_point)
@@ -703,18 +701,17 @@ int manage_class_slot::mutate(int cnt)
 }
 int manage_class_slot::manage_class()
 {
-    int i,j,k,l,m,n;
-    for(i=1;i<=ins;i++)
+    for(auto i=1;i<=ins;i++)
     {
-        for(j=1;j<=45;j++)
+        for(auto j=1;j<=45;j++)
         {
             if(time_slot[i][j])
-              theory[i].push_back(MP(time_slot[i][j],j));
+                theory[i].push_back(MP(time_slot[i][j],j));
         }
     }
     name_theory.push_back("");
-    int cnt=1;
-    for(i=0;i<theory_courses.size();i++)  // Allocating possible time slot for every theory course
+    int cnt=1, m, n;
+    for(auto i=0u;i<theory_courses.size();i++)  // Allocating possible time slot for every theory course
     {
         string str=theory_courses[i];
         m=str[str.size()-4]-'0'; // Getting Batch number
@@ -737,12 +734,12 @@ int manage_class_slot::manage_class()
         {
             name_theory.push_back(str+"(c)");
             vector<ii>temp;
-            for(j=0;j<theory[ins1].size();j++)
+            for(auto j=0u;j<theory[ins1].size();j++)
             {
-                for(k=0;k<theory[ins2].size();k++)
+                for(auto k=0u;k<theory[ins2].size();k++)
                 {
                     if(theory[ins1][j].ss==theory[ins2][k].ss)
-                      temp.push_back(MP(theory[ins1][j].ff+theory[ins2][k].ff,theory[ins1][j].ss));
+                        temp.push_back(MP(theory[ins1][j].ff+theory[ins2][k].ff,theory[ins1][j].ss));
                 }
             }
             batch_theory[cnt]=m;
@@ -783,10 +780,10 @@ int manage_class_slot::manage_class()
             theory_slot[cnt++]=theory[ins2];
         }
     }
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
         m=theory_slot[i].size();
-        for(j=0;j<m;j++)
+        for(auto j=0;j<m;j++)
         {
             int slot=theory_slot[i][j].ss;
             int cur_batch=batch_theory[i];
@@ -800,27 +797,27 @@ int manage_class_slot::manage_class()
         }
     }
     double pheromone[cnt+1][50],evprate=0.7;
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
-        for(j=1;j<=45;j++)
-          pheromone[i][j]=1/evprate; // 1/ro where ro=0.7
+        for(auto j=1;j<=45;j++)
+            pheromone[i][j]=1/evprate; // 1/ro where ro=0.7
     }
     int generation=0;
-    double max_pheromone=-1<<20;
+    double max_pheromone=-(1<<20);
     while(++generation<500)
     {
-        int ant=0,solved=0,maxi_temp=-1<<20;
+        int ant=0,solved=0,maxi_temp=-(1<<20);
         while(++ant<500)
         {
-            for(i=1;i<50;i++)
-              course_slot[i].clear();
+            for(auto i=1;i<50;i++)
+                course_slot[i].clear();
             memset(selective_slot_temp,0,sizeof(selective_slot_temp));
             memset(batch_days_class_temp,0,sizeof(batch_days_class_temp));
             memset(batch_slot_class_temp,0,sizeof(batch_slot_class_temp));
             memset(used_slot_for_class_temp,0,sizeof(used_slot_for_class_temp));
             memset(ins_days_class_temp,0,sizeof(ins_days_class_temp));
             int total=0,solved_temp=0;
-            for(i=1;i<cnt;i++)  // for each theory course assign a time slot
+            for(auto i=1;i<cnt;i++)  // for each theory course assign a time slot
             {
                 string str=name_theory[i];
                 vector<string>temp=split(str," ()");
@@ -830,7 +827,7 @@ int manage_class_slot::manage_class()
 
                 vector<pair<double,int> >probability;
                 double total_prob=0,z=0;
-                for(j=0;j<theory_slot[i].size();j++)
+                for(auto j=0u;j<theory_slot[i].size();j++)
                 {
                     double hur=pheromone[i][theory_slot[i][j].ss]*(1.00/(1+class_violation(i,theory_slot[i][j].ss,n)));
                     if(hur>0)
@@ -839,17 +836,17 @@ int manage_class_slot::manage_class()
                         total_prob+=probability[z++].ff;
                     }
                 }
-                for(j=0;j<z;j++)
-                  probability[j].ff/=total_prob;
+                for(auto j=0;j<z;j++)
+                    probability[j].ff/=total_prob;
                 sort(probability.rbegin(),probability.rend());
                 /*
                 for(j=0;j<z;j++)
                   printf("%d : %.2lf\n",probability[j].ss,probability[j].ff);
                 */
                 if(!z)
-                  continue;
+                    continue;
                 m=z*0.7;
-                m==0?m++:m=m;
+                m==0?m++:m;
 
                 int q=rand()%m;
                 int p=probability[q].ss;
@@ -861,7 +858,7 @@ int manage_class_slot::manage_class()
                     slot_day=slot/9+1;
                 batch_days_class_temp[cur_batch][slot_day]++;
                 batch_slot_class_temp[cur_batch][slot]=i;
-                for(k=0;k<theory_ins[i].size();k++)
+                for(auto k=0u;k<theory_ins[i].size();k++)
                 {
                     int ins=theory_ins[i][k];
                     used_slot_for_class_temp[ins][slot]=i;
@@ -885,9 +882,9 @@ int manage_class_slot::manage_class()
         {
             maxi_temp+=mutate(cnt); // Mutation of one course if result is good
             double val=0;
-            for(i=1;i<cnt;i++)
+            for(auto i=1;i<cnt;i++)
             {
-                for(j=1;j<=45;j++)
+                for(auto j=1;j<=45;j++)
                 {
                     if(selective_slot[i]==j)
                     {
@@ -895,7 +892,7 @@ int manage_class_slot::manage_class()
                         val+=pheromone[i][j];
                     }
                     else
-                      pheromone[i][j]=(1-evprate)*pheromone[i][j]; // (1-ro)*tau
+                        pheromone[i][j]=(1-evprate)*pheromone[i][j]; // (1-ro)*tau
                 }
             }
             // to print pheromone for every generation
@@ -929,171 +926,171 @@ int manage_class_slot::manage_class()
         }
         printf("\n");
     }*/
+    return 0;
 }
 
 class print
 {
-    public:
-        int print_input_data();
-        int print_lab();
-        int print_class();
-        int print_routine();
+public:
+    int print_input_data();
+    int print_lab();
+    int print_class();
+    int print_routine();
 };
 int print::print_input_data()
 {
-    int i,j,k;
     cout<<"Total Courses and Instructors :\n";
-    for(i=1;i<courses.size();i++)
+    for(auto i=1u;i<courses.size();i++)
     {
         if(courses[i][courses[i].size()-1]%2==0)
-          continue;
-        j=course_no[courses[i]];
+            continue;
+        auto j=course_no[courses[i]];
         cout<<courses[i]<<" : ";
-        for(k=0;k<course_instructor[j].size();k++)
+        for(auto k=0u;k<course_instructor[j].size();k++)
         {
             cout<<instructor[course_instructor[j][k]];
             if(k==0)
-              printf(" and ");
+                printf(" and ");
         }
         cout<<"\n";
     }
     printf("\n******************* Information of Instructors *******************\n");
-    for(i=1;i<=ins;i++)
+    for(auto i=1;i<=ins;i++)
     {
         cout<<"\n/////////////////////////////\n";
         cout<<instructor[i]<<"\n";
         cout<<"\nCourses :\n";
-        for(j=0;j<instructor_course[i].size();j++)
+        for(auto j=0u;j<instructor_course[i].size();j++)
         {
             if(instructor_course[i][j][instructor_course[i][j].size()-1]%2)
-              cout<<instructor_course[i][j]<<"\n";
+                cout<<instructor_course[i][j]<<"\n";
         }
         cout<<"\nTime_Slot :\n";
-        for(j=1;j<=45;j++)
+        for(auto j=1;j<=45;j++)
         {
             printf(" %d",time_slot[i][j]);
             if(j%9==0)
-              printf("\n");
+                printf("\n");
         }
     }
     cout<<"\n";
+    return 0;
 }
 int print::print_lab()
 {
     printf("******************* Lab Allocation *******************\n\n");
-    int i,j,k,l;
     int cnt=name_lab.size();
     printf("******************* Suitable lab_slot *******************\n");
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
         printf("%-15s:",name_lab[i].c_str());
-        for(j=0;j<lab_slot[i].size();j++)
+        for(auto j=0u;j<lab_slot[i].size();j++)
             cout<<" "<<lab_slot[i][j].ss;
         cout<<"\n";
     }
     cout<<"\n";
     printf("******************* Allocated lab_slot *******************\n");
-    for(i=1;i<cnt;i++)
-      printf("%-15s: %d\n",name_lab[i].c_str(),lab_side_final[i]);
+    for(auto i=1;i<cnt;i++)
+        printf("%-15s: %d\n",name_lab[i].c_str(),lab_side_final[i]);
     cout<<"\n";
     printf("%55s%48s%48s%48s%48s\n","SUN","MON","TUE","WED","THU");
-    for(i=1;i<=15*16+30;i++)
-      printf("-");
+    for(auto i=1;i<=15*16+30;i++)
+        printf("-");
     printf("\n");
-    for(i=1;i<=ins;i++)
+    for(auto i=1;i<=ins;i++)
     {
         printf("%-28s :",instructor[i].c_str());
-        for(j=1;j<=15;j++)
+        for(auto j=1;j<=15;j++)
         {
             if(used_slot_for_lab_final[i][j]==0)
-              printf("%15s|","");
+                printf("%15s|","");
             else
-              printf("%15s|",name_lab[used_slot_for_lab_final[i][j]].c_str());
+                printf("%15s|",name_lab[used_slot_for_lab_final[i][j]].c_str());
         }
         printf("\n");
     }
-    for(i=1;i<=15*16+30;i++)
-      printf("-");
+    for(auto i=1;i<=15*16+30;i++)
+        printf("-");
     printf("\n");
-    for(i=1;i<=batch;i++)
+    for(auto i=1;i<=batch;i++)
     {
         vector<string>temp[16];
-        for(j=1;j<cnt;j++)
+        for(auto j=1;j<cnt;j++)
         {
             if(batch_lab[j]>3*(i-1)&&batch_lab[j]<=3*i)
-              temp[lab_side_final[j]].push_back(name_lab[j]);
+                temp[lab_side_final[j]].push_back(name_lab[j]);
         }
         int maxi=0;
-        for(j=1;j<=15;j++)
-          maxi=max(maxi,(int)temp[j].size());
+        for(auto j=1;j<=15;j++)
+            maxi=max(maxi,(int)temp[j].size());
         printf("%-28s :",batch_name[i].c_str());
-        for(k=0;k<maxi;k++)
+        for(auto k=0;k<maxi;k++)
         {
             if(k>0)
-              printf("%30s","");
-            for(j=1;j<=15;j++)
+                printf("%30s","");
+            for(auto j=1;j<=15;j++)
             {
-                if(temp[j].size()>k)
-                  printf("%15s|",temp[j][k].c_str());
+                if((int)temp[j].size()>k)
+                    printf("%15s|",temp[j][k].c_str());
                 else
-                  printf("%15s|","");
+                    printf("%15s|","");
             }
             printf("\n");
         }
-        for(j=1;j<=15*16+30;j++)
-          printf("-");
+        for(auto j=1;j<=15*16+30;j++)
+            printf("-");
         printf("\n");
     }
     printf("\n\n");
+    return 0;
 }
 int print::print_class()
 {
     printf("******************* Class Allocation *******************\n\n");
-    int i,j,k,l;
     int cnt=name_theory.size();
     printf("******************* Suitable class_slot *******************\n");
-    for(i=1;i<cnt;i++)
+    for(auto i=1;i<cnt;i++)
     {
         cout<<name_theory[i]<<" : ";
-        for(j=0;j<theory_slot[i].size();j++)
-          cout<<theory_slot[i][j].ss<<" ";
+        for(auto j=0u;j<theory_slot[i].size();j++)
+            cout<<theory_slot[i][j].ss<<" ";
         cout<<"\n";
     }
     cout<<"\n";
     printf("******************* Allocated class_slot *******************\n");
-    for(i=1;i<cnt;i++)
-      printf("%-15s : %d\n",name_theory[i].c_str(),selective_slot_final[i]);
+    for(auto i=1;i<cnt;i++)
+        printf("%-15s : %d\n",name_theory[i].c_str(),selective_slot_final[i]);
     printf("%103s%144s%144s%144s%144s\n","SUN","MON","TUE","WED","THU");
-    for(i=1;i<=45*16+30;i++)
-      printf("-");
+    for(auto i=1;i<=45*16+30;i++)
+        printf("-");
     printf("\n");
-    for(i=1;i<=ins;i++)
+    for(auto i=1;i<=ins;i++)
     {
         printf("%-28s :",instructor[i].c_str());
-        for(j=1;j<=45;j++)
+        for(auto j=1;j<=45;j++)
         {
             if(used_slot_for_class_final[i][j]==0)
-              printf("%15s|","");
+                printf("%15s|","");
             else
-              printf("%15s|",name_theory[used_slot_for_class_final[i][j]].c_str());
+                printf("%15s|",name_theory[used_slot_for_class_final[i][j]].c_str());
         }
         printf("\n");
     }
-    for(i=1;i<=45*16+30;i++)
-      printf("-");
+    for(auto i=1;i<=45*16+30;i++)
+        printf("-");
     printf("\n");
-    for(i=1;i<=batch;i++)
+    for(auto i=1;i<=batch;i++)
     {
         vector<string>temp(50,"");
-        for(j=1;j<cnt;j++)
+        for(auto j=1;j<cnt;j++)
         {
             string str=name_theory[j];
             int m=batch_theory[j];
             if(m==i)
-              temp[selective_slot_final[j]]=name_theory[j];
+                temp[selective_slot_final[j]]=name_theory[j];
         }
         printf("%-28s :",batch_name[i].c_str());
-        for(j=1;j<=45;j++)
+        for(auto j=1;j<=45;j++)
         {
             if(temp[j].size())
                 printf("%15s|",temp[j].c_str());
@@ -1101,11 +1098,12 @@ int print::print_class()
                 printf("%15s|","");
         }
         printf("\n");
-        for(j=1;j<=45*16+30;j++)
-          printf("-");
+        for(auto j=1;j<=45*16+30;j++)
+            printf("-");
         printf("\n");
     }
     printf("\n\n");
+    return 0;
 }
 int print::print_routine()
 {
@@ -1132,16 +1130,15 @@ int print::print_routine()
             printf("There is problem in assigning -> %s <- course \n",name_theory[i].c_str());
             printf("Contact with instructor : ");
             if(theory_ins[i].size()==1)
-              printf("%s\n",instructor[theory_ins[i][0]].c_str());
+                printf("%s\n",instructor[theory_ins[i][0]].c_str());
             else
-              printf("%s and %s\n",instructor[theory_ins[i][0]].c_str(),instructor[theory_ins[i][1]].c_str());
+                printf("%s and %s\n",instructor[theory_ins[i][0]].c_str(),instructor[theory_ins[i][1]].c_str());
             printf("\n");
         }
     }
     printf("******************* Final Routine *******************\n");
-    int i,j,k,l;
-    for(j=1;j<=45*16+30;j++)
-      printf("-");
+    for(auto j=1;j<=45*16+30;j++)
+        printf("-");
     cout<<"\n";
     printf("%103s%144s%144s%144s%144s\n","SUN","MON","TUE","WED","THU");
     printf("%38s%16s%16s%16s%16s%16s%16s%16s%16s","1","2","3","4","5","6","7","8","9");
@@ -1149,59 +1146,59 @@ int print::print_routine()
     printf("%16s%16s%16s%16s%16s%16s%16s%16s%16s","1","2","3","4","5","6","7","8","9");
     printf("%16s%16s%16s%16s%16s%16s%16s%16s%16s","1","2","3","4","5","6","7","8","9");
     printf("%16s%16s%16s%16s%16s%16s%16s%16s%16s\n","1","2","3","4","5","6","7","8","9");
-    for(i=1;i<=45*16+30;i++)
-      printf("-");
+    for(auto i=1;i<=45*16+30;i++)
+        printf("-");
     printf("\n");
-    for(i=1;i<=ins;i++)
+    for(auto i=1;i<=ins;i++)
     {
         printf("%-28s :",instructor[i].c_str());
-        for(j=1;j<=15;j++)
+        for(auto j=1;j<=15;j++)
         {
             if(used_slot_for_lab_final[i][j]==0)
             {
-                for(k=(j-1)*3+1;k<=j*3;k++)
-                  printf("%15s|",name_theory[used_slot_for_class_final[i][k]].c_str());
+                for(auto k=(j-1)*3+1;k<=j*3;k++)
+                    printf("%15s|",name_theory[used_slot_for_class_final[i][k]].c_str());
             }
             else
-              printf("%14s->%15s<-%14s|","",name_lab[used_slot_for_lab_final[i][j]].c_str(),"");
+                printf("%14s->%15s<-%14s|","",name_lab[used_slot_for_lab_final[i][j]].c_str(),"");
         }
         printf("\n");
     }
-    for(i=1;i<=45*16+30;i++)
-      printf("-");
+    for(auto i=1;i<=45*16+30;i++)
+        printf("-");
     printf("\n");
-    for(i=1;i<=batch;i++)
+    for(auto i=1;i<=batch;i++)
     {
         vector<string>temp1(50,"");
-        for(j=1;j<name_theory.size();j++)
+        for(auto j=1u;j<name_theory.size();j++)
         {
             string str=name_theory[j];
             int m=batch_theory[j];
             if(m==i)
-              temp1[selective_slot_final[j]]=name_theory[j];
+                temp1[selective_slot_final[j]]=name_theory[j];
         }
         vector<string>temp2[16];
-        for(j=1;j<name_lab.size();j++)
+        for(auto j=1u;j<name_lab.size();j++)
         {
             if(batch_lab[j]>3*(i-1)&&batch_lab[j]<=3*i)
-              temp2[lab_side_final[j]].push_back(name_lab[j]);
+                temp2[lab_side_final[j]].push_back(name_lab[j]);
         }
         int maxi=0;
-        for(j=1;j<=15;j++)
-          maxi=max(maxi,(int)temp2[j].size());
+        for(auto j=1;j<=15;j++)
+            maxi=max(maxi,(int)temp2[j].size());
         printf("%-28s :",batch_name[i].c_str());
-        for(k=0;k<maxi;k++)
+        for(auto k=0;k<maxi;k++)
         {
             if(k>0)
-              printf("%30s","");
-            for(j=1;j<=15;j++)
+                printf("%30s","");
+            for(auto j=1;j<=15;j++)
             {
                 if(temp2[j].size())
                 {
-                    if(temp2[j].size()>k)
-                      printf("%14s->%15s<-%14s|","",temp2[j][k].c_str(),"");
+                    if((int)temp2[j].size()>k)
+                        printf("%14s->%15s<-%14s|","",temp2[j][k].c_str(),"");
                     else
-                      printf("%15s|%15s|%15s|","","","");
+                        printf("%15s|%15s|%15s|","","","");
                 }
                 else
                 {
@@ -1210,16 +1207,17 @@ int print::print_routine()
                         printf("%15s|%15s|%15s|","","","");
                         continue;
                     }
-                    for(l=(j-1)*3+1;l<=j*3;l++)
+                    for(auto l=(j-1)*3+1;l<=j*3;l++)
                         printf("%15s|",temp1[l].c_str());
                 }
             }
             printf("\n");
         }
-        for(j=1;j<=45*16+30;j++)
-          printf("-");
+        for(auto j=1;j<=45*16+30;j++)
+            printf("-");
         printf("\n");
     }
+    return 0;
 }
 int main()
 {
@@ -1230,7 +1228,7 @@ int main()
     inp.take_courses_info();
     inp.take_instructors_info();
 
-    freopen("Routine.txt","w",stdout);
+    stdout = freopen("Routine.txt","w",stdout);
 
     print pnt;
     //pnt.print_input_data();
@@ -1249,5 +1247,5 @@ int main()
     printf ("\nIt took %.2lf seconds.\n",(double)tt/CLOCKS_PER_SEC);
 
     fclose(stdout);
-return 0;
+    return 0;
 }
